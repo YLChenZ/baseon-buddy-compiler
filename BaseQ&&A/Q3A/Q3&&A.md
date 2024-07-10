@@ -17,8 +17,7 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 
 可以看出我们设置的向量化长度为4。
 
-动态向量加法的实现在：https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir
-已经实现了，我们要做的是把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
+动态向量加法的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir)，我们要做的是把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
 
 ```
 func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: memref<?xi32>) {
