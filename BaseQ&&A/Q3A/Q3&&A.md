@@ -17,7 +17,7 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 
 可以看出我们设置的向量化长度为4。
 
-动态向量加法的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir)，我们要做的是把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
+动态向量加法的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir)，我们把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
 
 ```
 func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: memref<?xi32>) {
@@ -42,7 +42,7 @@ func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: m
 }
 ```
 
-完成这一步，我们要给MLIRGccLoopsEx1DynVec.mlir写benchmark了：MLIRGccLoopsEx1DynVecBenchmark.cpp内容如下：
+完成这一步，我们要给MLIRGccLoopsEx1DynVec.mlir写benchmark了：MLIRGccLoopsEx1DynVecBenchmark.cpp，内容如下：
 
 ```
 //===- MLIRGccLoopsEx1DynVecBenchmark.cpp --------------------------------------------===//
@@ -260,7 +260,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 ```
 
-编译我们的benchmark：
+编译我们的benchmark (Vectorbenchmark)：
 
 ```
 $ mkdir build && cd build
