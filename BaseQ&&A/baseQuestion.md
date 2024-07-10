@@ -1,10 +1,10 @@
 1. 编译成功`buddy-mlir`，然后参考`buddy-benchmark`的`README.md`，跑通`benchmarks/Vectorization`里面的`gccloops`（即，能成功运行`buddy-benchmark/build/bin`里的`vectorization-gccloops-benchmark`可执行文件）。该`benchmark`来自`LLVM`用于探究自动向量化性能的`benchmark`，具体可以参见
 
-   [LLVM的自动向量化文档]: https://llvm.org/docs/Vectorizers.html#the-loop-vectorizer
+   [LLVM的自动向量化文档](https://llvm.org/docs/Vectorizers.html#the-loop-vectorizer)
 
    ，`gcc-loops`源代码在
 
-   [此处]: https://github.com/llvm/llvm-test-suite/tree/main/SingleSource/UnitTests/Vectorize
+   [此处](https://github.com/llvm/llvm-test-suite/tree/main/SingleSource/UnitTests/Vectorize)
 
    。
 
