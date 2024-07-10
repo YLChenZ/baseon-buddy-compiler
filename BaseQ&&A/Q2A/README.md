@@ -145,7 +145,7 @@ $ mkdir build && cd build
 $ cmake -G Ninja .. \
     -DCMAKE_BUILD_TYPE=RELEASE \
     -DVECTORIZATION_BENCHMARKS=ON \
-    -DBUDDY_MLIR_BUILD_DIR=/home/xxxxx/buddy-mlir/build   这里要换成你自己编译好的buddy-mlir/build目录。
+    -DBUDDY_MLIR_BUILD_DIR=/home/xxxxx/buddy-mlir/build   #这里要换成你自己编译好的buddy-mlir/build目录。
 
 $ ninja vectorization-gccloops-benchmark
 
