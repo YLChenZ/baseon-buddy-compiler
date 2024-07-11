@@ -1,4 +1,1 @@
-if(VECTORIZATION_BENCHMARKS)
-  add_subdirectory(Vectorization)
-endif()
-
+add_subdirectory(Vectorization)
