@@ -2,8 +2,7 @@
 # MLIR SCF Dialect GccLoopsEx1 Operation + Upstream Lowering Passes
 #-----------------------------------------------------------------------------------
 
-add_custom_command(
-  OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
+add_custom_command(OUTPUT mlir-gccloopsex1.o
   COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/benchmark/MLIRGccLoopsEx1.mlir 
             -convert-scf-to-cf
             -expand-strided-metadata
@@ -23,7 +22,7 @@ set_target_properties(MLIRGccLoopsEx1 PROPERTIES LINKER_LANGUAGE CXX)
 # MLIR SCF Dialect GccLoopsEx1Vec Operation + Upstream Lowering Passes
 #---------------------------------------------------------------------------------------
 
-add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
+add_custom_command(OUTPUT mlir-gccloopsex1vec.o
   COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/benchmark/MLIRGccLoopsEx1Vec.mlir
             -convert-vector-to-scf
             -lower-affine
@@ -47,8 +46,7 @@ set_target_properties(MLIRGccLoopsEx1Vec PROPERTIES LINKER_LANGUAGE CXX)
 # MLIR SCF Dialect GccLoopsEx1DynVec Operation + Upstream Lowering Passes
 #-------------------------------------------------------------------------------------------
 
-add_custom_command(
-  OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
+add_custom_command(OUTPUT mlir-gccloopsex1dynvec.o
   COMMAND ${BUDDY_MLIR_BINARY_DIR}/buddy-opt ${CMAKE_SOURCE_DIR}/benchmark/MLIRGccLoopsEx1DynVec.mlir
             -lower-vector-exp
             -convert-vector-to-llvm
