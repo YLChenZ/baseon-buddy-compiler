@@ -1,0 +1,14 @@
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/edit_cache.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/rebuild_cache.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/list_install_components.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/install.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/install/local.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/install/strip.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/benchmark.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/benchmark_main.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/edit_cache.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/rebuild_cache.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/list_install_components.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/install.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/install/local.dir
+/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/src/CMakeFiles/install/strip.dir

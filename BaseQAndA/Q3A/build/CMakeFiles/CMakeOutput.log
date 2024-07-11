@@ -1,0 +1,386 @@
+The target system is: Linux -  - riscv64
+The host system is: Linux - 6.5.0-41-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/3.22.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_22a67 && [1/2] Building C object CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o
+Using built-in specs.
+COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc
+Target: riscv64-unknown-linux-gnu
+Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow'
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 13.2.0 (gc891d8dc23e) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/cc1 -quiet -v -imultilib . /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_22a67.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=rocket -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr -version -o /tmp/ccUUzI3E.s
+GNU C17 (gc891d8dc23e) version 13.2.0 (riscv64-unknown-linux-gnu)
+	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/local/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include
+End of search list.
+Compiler executable checksum: 144c5a7c78613d403b1dfaf77f5342be
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/as -v --traditional-format -march=rv64imafdc_zicsr -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o /tmp/ccUUzI3E.s
+GNU assembler version 2.42 (riscv64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.42
+COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/
+LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.'
+[2/2] Linking C executable cmTC_22a67
+Using built-in specs.
+COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc
+COLLECT_LTO_WRAPPER=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper
+Target: riscv64-unknown-linux-gnu
+Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow'
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 13.2.0 (gc891d8dc23e) 
+COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/
+LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22a67' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_22a67.'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2 -plugin /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXZ2Pto.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-linux-riscv64-lp64d.so.1 -o cmTC_22a67 /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0 -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o -latomic -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22a67' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_22a67.'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  implicit include dirs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(riscv64-unknown-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_22a67 && [1/2] Building C object CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc]
+  ignore line: [Target: riscv64-unknown-linux-gnu]
+  ignore line: [Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow']
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 13.2.0 (gc891d8dc23e) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/']
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/cc1 -quiet -v -imultilib . /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_22a67.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=rocket -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr -version -o /tmp/ccUUzI3E.s]
+  ignore line: [GNU C17 (gc891d8dc23e) version 13.2.0 (riscv64-unknown-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/local/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Compiler executable checksum: 144c5a7c78613d403b1dfaf77f5342be]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/']
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/as -v --traditional-format -march=rv64imafdc_zicsr -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o /tmp/ccUUzI3E.s]
+  ignore line: [GNU assembler version 2.42 (riscv64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.42]
+  ignore line: [COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.']
+  ignore line: [[2/2] Linking C executable cmTC_22a67]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper]
+  ignore line: [Target: riscv64-unknown-linux-gnu]
+  ignore line: [Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow']
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 13.2.0 (gc891d8dc23e) ]
+  ignore line: [COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22a67' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_22a67.']
+  link line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2 -plugin /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXZ2Pto.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-linux-riscv64-lp64d.so.1 -o cmTC_22a67 /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0 -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o -latomic -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccXZ2Pto.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-melf64lriscv] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-riscv64-lp64d.so.1] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_22a67] ==> ignore
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_22a67.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-latomic] ==> lib [atomic]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/lib]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+  implicit libs: [atomic;gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+  implicit dirs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/lib;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7aa79 && [1/2] Building CXX object CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o
+Using built-in specs.
+COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++
+Target: riscv64-unknown-linux-gnu
+Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow'
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 13.2.0 (gc891d8dc23e) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/cc1plus -quiet -v -imultilib . -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7aa79.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=rocket -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr -version -o /tmp/ccVlvqKC.s
+GNU C++17 (gc891d8dc23e) version 13.2.0 (riscv64-unknown-linux-gnu)
+	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/local/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu/.
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/backward
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include
+End of search list.
+Compiler executable checksum: 9318b6fc5023d57d3f7bb3115bb4ffa5
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/as -v --traditional-format -march=rv64imafdc_zicsr -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVlvqKC.s
+GNU assembler version 2.42 (riscv64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.42
+COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/
+LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_7aa79
+Using built-in specs.
+COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++
+COLLECT_LTO_WRAPPER=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper
+Target: riscv64-unknown-linux-gnu
+Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow'
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 13.2.0 (gc891d8dc23e) 
+COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/
+LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7aa79' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_7aa79.'
+ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2 -plugin /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBadOGg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-linux-riscv64-lp64d.so.1 -o cmTC_7aa79 /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0 -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o -latomic -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7aa79' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_7aa79.'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu/.]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/backward]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include]
+    add: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu/.] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/backward] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0/backward]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include]
+  collapse include dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  implicit include dirs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include/c++/13.2.0/backward;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/include;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(riscv64-unknown-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_7aa79 && [1/2] Building CXX object CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++]
+  ignore line: [Target: riscv64-unknown-linux-gnu]
+  ignore line: [Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow']
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 13.2.0 (gc891d8dc23e) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/']
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/cc1plus -quiet -v -imultilib . -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7aa79.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=rocket -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr -version -o /tmp/ccVlvqKC.s]
+  ignore line: [GNU C++17 (gc891d8dc23e) version 13.2.0 (riscv64-unknown-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/local/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/riscv64-unknown-linux-gnu/.]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include/c++/13.2.0/backward]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/include-fixed]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/include]
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Compiler executable checksum: 9318b6fc5023d57d3f7bb3115bb4ffa5]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/']
+  ignore line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/as -v --traditional-format -march=rv64imafdc_zicsr -march=rv64imafdc_zicsr -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVlvqKC.s]
+  ignore line: [GNU assembler version 2.42 (riscv64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.42]
+  ignore line: [COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_7aa79]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper]
+  ignore line: [Target: riscv64-unknown-linux-gnu]
+  ignore line: [Configured with: /home/lambda/buddy-mlir/thirdparty/riscv-gnu-toolchain/gcc/configure --target=riscv64-unknown-linux-gnu --prefix=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain --with-sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --with-pkgversion=gc891d8dc23e --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=.././gcc --disable-multilib --with-abi=lp64d --with-arch=rv64imafdc --with-tune=rocket --with-isa-spec=20191213 'CFLAGS_FOR_TARGET=-O2    -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-O2    -mcmodel=medlow']
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 13.2.0 (gc891d8dc23e) ]
+  ignore line: [COMPILER_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib/:/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7aa79' '-shared-libgcc' '-mtune=rocket' '-march=rv64imafdc_zicsr' '-mabi=lp64d' '-misa-spec=20191213' '-march=rv64imafdc_zicsr' '-dumpdir' 'cmTC_7aa79.']
+  link line: [ /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2 -plugin /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so -plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBadOGg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-linux-riscv64-lp64d.so.1 -o cmTC_7aa79 /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0 -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib -L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o -latomic -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/libexec/gcc/riscv64-unknown-linux-gnu/13.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccBadOGg.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-melf64lriscv] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-riscv64-lp64d.so.1] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_7aa79] ==> ignore
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib]
+    arg [-L/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib] ==> dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_7aa79.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-latomic] ==> lib [atomic]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o]
+    arg [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o] ==> obj [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/../../../../riscv64-unknown-linux-gnu/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/lib]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib]
+  collapse library dir [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib] ==> [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+  implicit libs: [atomic;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib/crt1.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crti.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtbegin.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtend.o;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0/crtn.o]
+  implicit dirs: [/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-linux-gnu/13.2.0;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/riscv64-unknown-linux-gnu/lib;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/lib;/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_959d1 && [1/2] Building C object CMakeFiles/cmTC_959d1.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_959d1
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7bd2c && [1/2] Building C object CMakeFiles/cmTC_7bd2c.dir/src.c.o
+[2/2] Linking C executable cmTC_7bd2c
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

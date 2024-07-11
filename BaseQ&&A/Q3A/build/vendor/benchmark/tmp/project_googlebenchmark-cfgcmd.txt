@@ -1,1 +1,0 @@
-cmd='/usr/local/bin/cmake;-DCMAKE_INSTALL_PREFIX=/home/zesang/Ex1/build/vendor/benchmark;-DCMAKE_BUILD_TYPE:STRING=RELEASE;-DCMAKE_TOOLCHAIN_FILE=/home/zesang/Ex1/toolchain-riscv64.cmake;-DBENCHMARK_ENABLE_TESTING=OFF;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'

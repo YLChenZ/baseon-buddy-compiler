@@ -1,0 +1,39 @@
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7c75b && [1/2] Building CXX object CMakeFiles/cmTC_7c75b.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_7c75b.dir/src.cxx.o 
+/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++ -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -std=c++11  -Wall  -Wextra  -Wshadow  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_7c75b.dir/src.cxx.o -c /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp/src.cxx
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-Wshorten-64-to-32'
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-Wshorten-64-to-32'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_91858 && [1/2] Building CXX object CMakeFiles/cmTC_91858.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_91858.dir/src.cxx.o 
+/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++ -DHAVE_CXX_FLAG_WD654  -std=c++11  -Wall  -Wextra  -Wshadow  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -wd654   -wd654 -o CMakeFiles/cmTC_91858.dir/src.cxx.o -c /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp/src.cxx
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-wd654'
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-wd654'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_0fb21 && [1/2] Building CXX object CMakeFiles/cmTC_0fb21.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_0fb21.dir/src.cxx.o 
+/home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++ -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -std=c++11  -Wall  -Wextra  -Wshadow  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -Wthread-safety   -Wthread-safety -o CMakeFiles/cmTC_0fb21.dir/src.cxx.o -c /home/lambda/baseon-buddy-compiler/BaseQAndA/Q3A/build/vendor/benchmark/src/project_googlebenchmark-build/CMakeFiles/CMakeTmp/src.cxx
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-Wthread-safety'
+riscv64-unknown-linux-gnu-g++: error: unrecognized command-line option '-Wthread-safety'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
