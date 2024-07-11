@@ -271,7 +271,7 @@ target_link_libraries(Vectorbenchmark
 ```
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR riscv64)
-
+#NOTE：下面的编译器指定的目录要正确！！！请参考下面的目录设置你的目录，以完成toolchain-riscv64.cmake
 set(CMAKE_C_COMPILER /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc)
 set(CMAKE_CXX_COMPILER /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++)
 
