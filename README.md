@@ -44,7 +44,7 @@ Q3A：
 ```
 $ cd baseon-buddy-compiler/BaseQAndA/Q3A
 $ mkdir build && cd build
-$ cmake -G Ninja ..
+$ cmake -G Ninja ..  \
     -DCMAKE_BUILD_TYPE=RELEASE   \
     -DCMAKE_TOOLCHAIN_FILE=../toolchain-riscv64.cmake  \
     -DBUDDY_MLIR_BUILD_DIR=/home/XXX/buddy-mlir/build  #这里要填你自己的buddy-mlir/build具体路径，最好是绝对路径
