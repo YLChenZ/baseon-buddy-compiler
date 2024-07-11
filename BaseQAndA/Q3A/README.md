@@ -294,8 +294,25 @@ $ ninja Vectorbenchmark
 
 最后采用QEMU来模拟执行得到的Vectorbenchmark：
 
+先写一个makefile简化我们调用库的流程：
+```
+#!/bin/bash
+
+#configure
+CROSS_MLIR_LIB := ../../../buddy-mlir/llvm/build-cross-mlir-rv/lib
+QEMU := ../../../buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/qemu-riscv64
+RISCV_GNU_TOOLCHAIN_SYSROOT := ../../../buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/
+
+
+vetor-benchmark-run:
+	@LD_LIBRARY_PATH=${CROSS_MLIR_LIB} ${QEMU} -L ${RISCV_GNU_TOOLCHAIN_SYSROOT} -cpu max ./build/Vectorbenchmark
+```
+
+make一下就行了：
+
 ```
 $ cd ..
 $ make vetor-benchmark-run
 ```
+
 
