@@ -1,6 +1,7 @@
 查看上一个任务里`gcc-loops`的`MLIR`实现代码，以第一个程序`MLIRGccLoopsEx1.mlir`为例，可以看到它只是朴素的标量版本（用了`scf.for`，`arith.addi`每次只对一位进行操作）。请用`MLIR`的`Vector Dialect`实现一个同样功能的向量化版本，文件命名为`MLIRGccLoopsEx1Vec.mlir`，并加入到`buddy-benchmark`里，与`MLIRGccLoopsEx1.mlir`的性能进行比较。`Vector Dialect`的用法可参考`MLIR`官方文档或`buddy-compiler`中的已有实现，如`buddy-mlir`里的`MLIRVector`样例和`buddy-benchmark`里的矩阵乘法向量化实现。
 
 这个问题相较于问题1提升了一个大档，要修改的东西比较多也比较细，要自己实现的倒是不多。
+
 （1）根据要求，先写出MLIRGccLoopsEx1Vec.mlir：
 
 ```
@@ -30,7 +31,8 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 }
 ```
 
-（2）我们要将MLIRgccloopsVec.mlir加入到gccloops中的测试用例，需要改动CMakeLists.txt和Main.cpp，还需创建一个名为MLIRGccLoopsEx1VecBenchmark.cpp的文件，并根据MLIRGccLoopsEx1Benchmark.cpp作相应调整：
+（2）我们要将MLIRgccloopsVec.mlir加入到gccloops中的测试用例，需要改动CMakeLists.txt和Main.cpp，还需创建一个名为MLIRGccLoopsEx1VecBenchmark.cpp的文件根据MLIRGccLoopsEx1Benchmark.cpp作相应调整：
+
 创建MLIRGccLoopsEx1Benchmark.cpp：
 
 ```
