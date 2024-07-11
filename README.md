@@ -6,6 +6,9 @@
 2.对buddy-benchmark作了一些改动，改动的动机来自于slack。
 
 下载本项目：
+
+> **_ATTENTION:_**保证该项目和buddy-mlir在同一个目录下。
+
 ```
 git clone git@github.com:YLChenZ/baseon-buddy-compiler.git
 ```
