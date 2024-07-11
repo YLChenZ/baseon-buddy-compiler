@@ -266,7 +266,7 @@ target_link_libraries(Vectorbenchmark
   )
 ```
 
-针对RISC-V我单独写了一个文件来指定编译工具链toolchain-riscv64.cmake：
+针对RISC-V我单独写了一个文件toolchain-riscv64.cmake来指定编译工具链：
 
 ```
 set(CMAKE_SYSTEM_NAME Linux)
@@ -294,7 +294,7 @@ $ ninja Vectorbenchmark
 
 最后采用QEMU来模拟执行得到的Vectorbenchmark：
 
-先写一个makefile简化我们调用库的流程：
+  1. 先写一个makefile简化我们调用库的流程：
 ```
 #!/bin/bash
 
@@ -308,7 +308,7 @@ vetor-benchmark-run:
 	@LD_LIBRARY_PATH=${CROSS_MLIR_LIB} ${QEMU} -L ${RISCV_GNU_TOOLCHAIN_SYSROOT} -cpu max ./build/Vectorbenchmark
 ```
 
-make一下就行了：
+  2. make一下就行了：
 
 ```
 $ cd ..
