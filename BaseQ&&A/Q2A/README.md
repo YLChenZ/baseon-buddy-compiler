@@ -30,6 +30,7 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 （2）我们要将MLIRgccloopsVec.mlir加入到gccloops中的测试用例，需要改动CMakeLists.txt和Main.cpp，还需创建一个名为MLIRGccLoopsEx1VecBenchmark.cpp的文件根据MLIRGccLoopsEx1Benchmark.cpp作相应调整：
 
   1）改动CMakeLists.txt：
+  
 在原有的添加如下内容：（放在20多行）
 
 ```
@@ -62,10 +63,13 @@ set_target_properties(MLIRGccLoopsEx1Vec PROPERTIES LINKER_LANGUAGE CXX)
 转到末尾（400多行）：
 
 在add_executable里面添加：MLIRGccLoopsEx1VecBenchmark.cpp
+
 在target_link_libraries里面添加：MLIRGccLoopsEx1Vec
 
   2）改动Main.cpp
+  
 在24行添加函数声明：void generateResultMLIRGccLoopsEx1Vec();
+
 在53行添加调用函数：generateResultMLIRGccLoopsEx1Vec();
 
   3）写MLIRGccLoopsEx1VecBenchmark.cpp：
