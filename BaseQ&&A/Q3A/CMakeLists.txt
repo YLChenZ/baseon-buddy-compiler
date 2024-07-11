@@ -13,12 +13,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS "-no-pie")
 set(CMAKE_C_FLAGS "-no-pie")
 
+#-------------------------------------------------------------------------------
+#configuration
+#-------------------------------------------------------------------------------
+set(BuddyMLIR_DIR ${BUDDY_MLIR_BUILD_DIR}/cmake)
+find_package(BuddyMLIR REQUIRED CONFIG)
 
-# 设置 RISC-V路径
-set(RISCV_GCC /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc)
-set(RISCV_LIB_PATH /home/zesang/buddy-mlir/thirdparty/build-cross-mlir/lib)
+# BUDDY binary directory.
+set(BUDDY_MLIR_BINARY_DIR ${BUDDY_MLIR_BUILD_DIR}/bin)
 
+# MLIR binary directory.
+set(LLVM_MLIR_BINARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/bin)
+set(LLVM_MLIR_LIBRARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/lib)
 
+# RISC-V Lib
+set(RISCV_LIB_PATH ${BUDDY_MLIR_BUILD_DIR}/../llvm/build-cross-mlir-rv/lib)
 
 #-------------------------------------------------------------------------------
 # Deploy google/benchmark
@@ -57,13 +66,13 @@ find_package(Threads)
 target_link_libraries(GoogleBenchmark INTERFACE Threads::Threads)
 
 
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 # MLIR SCF Dialect GccLoopsEx1 Operation + Upstream Lowering Passes
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 
 add_custom_command(
   OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
-  COMMAND /home/zesang/buddy-mlir/llvm/build/bin/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1.mlir 
+  COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1.mlir 
             -convert-scf-to-cf
             -expand-strided-metadata
             -convert-arith-to-llvm
@@ -71,41 +80,44 @@ add_custom_command(
             -finalize-memref-to-llvm
             -convert-func-to-llvm 
             -reconcile-unrealized-casts | 
-          /home/zesang/buddy-mlir/llvm/build/bin/mlir-translate --mlir-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
+          ${LLVM_MLIR_BINARY_DIR}/mlir-translate --mlir-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
 )
 
 add_library(MLIRGccLoopsEx1 STATIC mlir-gccloopsex1.o)
 set_target_properties(MLIRGccLoopsEx1 PROPERTIES LINKER_LANGUAGE CXX)
 
-#------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 # MLIR SCF Dialect GccLoopsEx1Vec Operation + Upstream Lowering Passes
-#------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
-  COMMAND /home/zesang/buddy-mlir/llvm/build/bin/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1Vec.mlir
+  COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1Vec.mlir
             -convert-vector-to-scf
-	    -lower-affine
-	    -convert-scf-to-cf
+            -lower-affine
+            -convert-scf-to-cf
             -expand-strided-metadata
             -convert-arith-to-llvm
             -llvm-request-c-wrappers
-	    -convert-vector-to-llvm
+            -convert-vector-to-llvm
             -finalize-memref-to-llvm
             -convert-func-to-llvm
             -reconcile-unrealized-casts |
-          /home/zesang/buddy-mlir/llvm/build/bin/mlir-translate --mlir-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
+          ${LLVM_MLIR_BINARY_DIR}/mlir-translate --mlir-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
 )
 
 add_library(MLIRGccLoopsEx1Vec STATIC mlir-gccloopsex1vec.o)
 set_target_properties(MLIRGccLoopsEx1Vec PROPERTIES LINKER_LANGUAGE CXX)
 
 
-# 添加自定义命令以生成 mlir-gccloopsex1dynvec.o 对象文件
+#-------------------------------------------------------------------------------------------
+# MLIR SCF Dialect GccLoopsEx1DynVec Operation + Upstream Lowering Passes
+#-------------------------------------------------------------------------------------------
+
 add_custom_command(
   OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
-  COMMAND /home/zesang/buddy-mlir/build/bin/buddy-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1DynVec.mlir
+  COMMAND ${BUDDY_MLIR_BINARY_DIR}/buddy-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1DynVec.mlir
             -lower-vector-exp
             -convert-vector-to-llvm
             -lower-affine
@@ -117,8 +129,8 @@ add_custom_command(
             -finalize-memref-to-llvm
             -convert-func-to-llvm
             -reconcile-unrealized-casts |
-          /home/zesang/buddy-mlir/build/bin/buddy-translate --buddy-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
+          ${BUDDY_MLIR_BINARY_DIR}/buddy-translate --buddy-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
 )
 
 add_library(MLIRGccLoopsEx1DynVec STATIC mlir-gccloopsex1dynvec.o)
@@ -141,8 +153,3 @@ target_link_libraries(Vectorbenchmark
   -lmlir_runner_utils
   -lmlir_c_runner_utils
   )
-  
-
-
-
-
