@@ -48,7 +48,7 @@ $ cmake -G Ninja ..
     -DBUDDY_MLIR_BUILD_DIR=/home/XXX/buddy-mlir/build  #这里要填你自己的buddy-mlir/build具体路径，最好是绝对路径
 $ ninja Vectorbenchmark
 $ cd ..
-$ make vetor-benchmark-run
+$ make vector-benchmark-run
 ```
 
 
