@@ -48,7 +48,7 @@ func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: m
 //===- MLIRGccLoopsEx1DynVecBenchmark.cpp --------------------------------------------===//
 
 #include <benchmark/benchmark.h>
-#include </home/zesang/buddy-mlir/frontend/Interfaces/buddy/Core/Container.h>
+#include <buddy/Core/Container.h>
 #include <iostream>
 
 // Declare the gccloopsex1dynvec C interface.
@@ -107,9 +107,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(MyBenchmark)
 
-# 设置工具链文件
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/toolchain-riscv64.cmake)
-
 
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 17)
@@ -118,9 +115,30 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS "-no-pie")
 set(CMAKE_C_FLAGS "-no-pie")
 
-# 设置 RISC-V路径
-set(RISCV_GCC /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc)
-set(RISCV_LIB_PATH /home/zesang/buddy-mlir/thirdparty/build-cross-mlir/lib)
+#-------------------------------------------------------------------------------
+#configuration
+#-------------------------------------------------------------------------------
+set(BuddyMLIR_DIR ${BUDDY_MLIR_BUILD_DIR}/cmake)
+find_package(BuddyMLIR REQUIRED CONFIG)
+
+# BUDDY binary directory.
+set(BUDDY_MLIR_BINARY_DIR ${BUDDY_MLIR_BUILD_DIR}/bin)
+
+# MLIR binary directory.
+set(LLVM_MLIR_BINARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/bin)
+set(LLVM_MLIR_LIBRARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/lib)
+
+# RISC-V Lib
+set(RISCV_LIB_PATH ${BUDDY_MLIR_BUILD_DIR}/../llvm/build-cross-mlir-rv/lib)
+
+# Add BUDDY files to the include path
+include_directories(${BUDDY_MAIN_INCLUDE_DIR})
+include_directories(${BUDDY_MLIR_INTERFACE_DIR})
+include_directories(${BUDDY_THIRDPARTY_INCLUDE_DIR})
+
+# Helper functions.
+#include(${CMAKE_SOURCE_DIR}/toolchain-riscv64.cmake)
+set(RISCV_CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/toolchain-riscv64.cmake)
 
 #-------------------------------------------------------------------------------
 # Deploy google/benchmark
@@ -140,7 +158,7 @@ ExternalProject_Add(project_googlebenchmark
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/vendor/benchmark
     -DCMAKE_BUILD_TYPE:STRING=${CMAKE_BUILD_TYPE}
-    -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
+    -DCMAKE_TOOLCHAIN_FILE=${RISCV_CMAKE_TOOLCHAIN_FILE}
     -DBENCHMARK_ENABLE_TESTING=OFF
   UPDATE_COMMAND ""
   TEST_COMMAND "")
@@ -159,13 +177,13 @@ find_package(Threads)
 target_link_libraries(GoogleBenchmark INTERFACE Threads::Threads)
 
 
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 # MLIR SCF Dialect GccLoopsEx1 Operation + Upstream Lowering Passes
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 
 add_custom_command(
   OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
-  COMMAND /home/zesang/buddy-mlir/llvm/build/bin/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1.mlir 
+  COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1.mlir 
             -convert-scf-to-cf
             -expand-strided-metadata
             -convert-arith-to-llvm
@@ -173,41 +191,44 @@ add_custom_command(
             -finalize-memref-to-llvm
             -convert-func-to-llvm 
             -reconcile-unrealized-casts | 
-          /home/zesang/buddy-mlir/llvm/build/bin/mlir-translate --mlir-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
+          ${LLVM_MLIR_BINARY_DIR}/mlir-translate --mlir-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1.o
 )
 
 add_library(MLIRGccLoopsEx1 STATIC mlir-gccloopsex1.o)
 set_target_properties(MLIRGccLoopsEx1 PROPERTIES LINKER_LANGUAGE CXX)
 
-#------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 # MLIR SCF Dialect GccLoopsEx1Vec Operation + Upstream Lowering Passes
-#------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
-  COMMAND /home/zesang/buddy-mlir/llvm/build/bin/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1Vec.mlir
+  COMMAND ${LLVM_MLIR_BINARY_DIR}/mlir-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1Vec.mlir
             -convert-vector-to-scf
-	    -lower-affine
-	    -convert-scf-to-cf
+            -lower-affine
+            -convert-scf-to-cf
             -expand-strided-metadata
             -convert-arith-to-llvm
             -llvm-request-c-wrappers
-	    -convert-vector-to-llvm
+            -convert-vector-to-llvm
             -finalize-memref-to-llvm
             -convert-func-to-llvm
             -reconcile-unrealized-casts |
-          /home/zesang/buddy-mlir/llvm/build/bin/mlir-translate --mlir-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
+          ${LLVM_MLIR_BINARY_DIR}/mlir-translate --mlir-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1vec.o
 )
 
 add_library(MLIRGccLoopsEx1Vec STATIC mlir-gccloopsex1vec.o)
 set_target_properties(MLIRGccLoopsEx1Vec PROPERTIES LINKER_LANGUAGE CXX)
 
 
-# 添加自定义命令以生成 mlir-gccloopsex1dynvec.o 对象文件
+#-------------------------------------------------------------------------------------------
+# MLIR SCF Dialect GccLoopsEx1DynVec Operation + Upstream Lowering Passes
+#-------------------------------------------------------------------------------------------
+
 add_custom_command(
   OUTPUT ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
-  COMMAND /home/zesang/buddy-mlir/build/bin/buddy-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1DynVec.mlir
+  COMMAND ${BUDDY_MLIR_BINARY_DIR}/buddy-opt ${CMAKE_SOURCE_DIR}/MLIRGccLoopsEx1DynVec.mlir
             -lower-vector-exp
             -convert-vector-to-llvm
             -lower-affine
@@ -219,8 +240,8 @@ add_custom_command(
             -finalize-memref-to-llvm
             -convert-func-to-llvm
             -reconcile-unrealized-casts |
-          /home/zesang/buddy-mlir/build/bin/buddy-translate --buddy-to-llvmir |
-          /home/zesang/buddy-mlir/llvm/build/bin/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
+          ${BUDDY_MLIR_BINARY_DIR}/buddy-translate --buddy-to-llvmir |
+          ${LLVM_MLIR_BINARY_DIR}/llc -mtriple riscv64 -mattr=+v,+m -riscv-v-vector-bits-min=128 --filetype=obj -o ${CMAKE_BINARY_DIR}/mlir-gccloopsex1dynvec.o
 )
 
 add_library(MLIRGccLoopsEx1DynVec STATIC mlir-gccloopsex1dynvec.o)
@@ -245,16 +266,16 @@ target_link_libraries(Vectorbenchmark
   )
 ```
 
-针对RISC v我单独写了一个文件来指定编译工具链toolchain-riscv64.cmake：
+针对RISC-V我单独写了一个文件来指定编译工具链toolchain-riscv64.cmake：
 
 ```
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR riscv64)
 
-set(CMAKE_C_COMPILER /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc)
-set(CMAKE_CXX_COMPILER /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++)
+set(CMAKE_C_COMPILER /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/riscv64-unknown-linux-gnu-g++)
 
-set(CMAKE_FIND_ROOT_PATH /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/sysroot)
+set(CMAKE_FIND_ROOT_PATH /home/lambda/buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot)
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
@@ -267,15 +288,14 @@ $ mkdir build && cd build
 $ cmake -G Ninja .. \
     -DCMAKE_BUILD_TYPE=RELEASE \
     -DCMAKE_TOOLCHAIN_FILE=../toolchain-riscv64.cmake
+    -DBUDDY_MLIR_BUILD_DIR=/home/lambda/buddy-mlir/build
 $ ninja Vectorbenchmark
 ```
 
-最后就是用QEMU来模拟执行得到的Vectorbenchmark：
+最后采用QEMU来模拟执行得到的Vectorbenchmark：
 
 ```
-LD_LIBRARY_PATH=/home/zesang/buddy-mlir/thirdparty/build-cross-mlir/lib \
- /home/zesang/buddy-mlir/thirdparty/qemu/build/riscv64-linux-user/qemu-riscv64 \
- -L /home/zesang/buddy-mlir/thirdparty/build-riscv-gnu-toolchain/sysroot \
- -cpu rv64,x-v=true,vlen=128 Vectorbenchmark
+$ cd ..
+$ make vetor-benchmark-run
 ```
 
