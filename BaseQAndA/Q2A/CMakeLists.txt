@@ -1,6 +1,6 @@
 ##===- CMakeLists.txt - buddy-benchmark cmake root ------------*- cmake -*-===//
 ##
-## Configure the buddy-benchmark build.
+## Configure the mybenchmark build.
 ##
 ##===----------------------------------------------------------------------===//
 
@@ -46,9 +46,6 @@ include_directories(${BUDDY_THIRDPARTY_INCLUDE_DIR})
 set(LLVM_MLIR_BINARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/bin)
 set(LLVM_MLIR_LIBRARY_DIR ${BUDDY_MLIR_BUILD_DIR}/../llvm/build/lib)
 
-# Helper functions.
-include(${BUDDY_SOURCE_DIR}/cmake/buddy-benchmark.cmake)
-
 #-------------------------------------------------------------------------------
 # Deploy google/benchmark
 #-------------------------------------------------------------------------------
@@ -84,5 +81,5 @@ add_dependencies(GoogleBenchmark project_googlebenchmark)
 find_package(Threads)
 target_link_libraries(GoogleBenchmark INTERFACE Threads::Threads)
 
-
+add_subdirectory(benchmark)
 
