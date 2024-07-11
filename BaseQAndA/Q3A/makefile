@@ -6,7 +6,7 @@ QEMU := ../../../buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/qemu-riscv6
 RISCV_GNU_TOOLCHAIN_SYSROOT := ../../../buddy-mlir/build/thirdparty/riscv-gnu-toolchain/sysroot/
 
 
-vetor-benchmark-run:
+vector-benchmark-run:
 	@LD_LIBRARY_PATH=${CROSS_MLIR_LIB} ${QEMU} -L ${RISCV_GNU_TOOLCHAIN_SYSROOT} -cpu max ./build/Vectorbenchmark
 
 
