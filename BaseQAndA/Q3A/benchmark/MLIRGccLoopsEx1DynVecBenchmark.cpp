@@ -61,7 +61,7 @@ void generateResultMLIRGccLoopsEx1DynVec() {
   // Print the output.
   std::cout << "--------------------------------------------------------"
             << std::endl;
-  std::cout << "MLIR_GccLoopsEx1: MLIR GccLoopsEx1DynVec Operation" << std::endl;
+  std::cout << "MLIR_GccLoopsEx1DynVec: MLIR GccLoopsEx1DynVec Operation" << std::endl;
   std::cout << "[ ";
   for (size_t i = 0; i < output.getSize(); i++) {
     std::cout << output.getData()[i] << " ";
