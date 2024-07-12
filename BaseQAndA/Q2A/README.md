@@ -201,3 +201,5 @@ $ cd bin
 $ ./vectorization-gccloops-benchmark
 ```
 
+# 运行结果：
+[Image text]([https://github.com/15234477664/github-upload/blob/master/img/1.png](https://github.com/YLChenZ/baseon-buddy-compiler/blob/main/BaseQAndA/Q2A/Q2Aresult.jpg))
