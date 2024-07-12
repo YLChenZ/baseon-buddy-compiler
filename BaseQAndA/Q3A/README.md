@@ -42,7 +42,7 @@ func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: m
 }
 ```
 
-完成这一步，我们要给MLIRGccLoopsEx1DynVec.mlir写benchmark了：MLIRGccLoopsEx1DynVecBenchmark.cpp，内容如下：
+完成这一步，我们要给MLIRGccLoopsEx1DynVec.mlir写benchmark：MLIRGccLoopsEx1DynVecBenchmark.cpp，内容如下：
 
 ```
 //===- MLIRGccLoopsEx1DynVecBenchmark.cpp --------------------------------------------===//
@@ -90,7 +90,7 @@ void generateResultMLIRGccLoopsEx1DynVec() {
   // Print the output.
   std::cout << "--------------------------------------------------------"
             << std::endl;
-  std::cout << "MLIR_GccLoopsEx1: MLIR GccLoopsEx1DynVec Operation" << std::endl;
+  std::cout << "MLIR_GccLoopsEx1DynVec: MLIR GccLoopsEx1DynVec Operation" << std::endl;
   std::cout << "[ ";
   for (size_t i = 0; i < output.getSize(); i++) {
     std::cout << output.getData()[i] << " ";
