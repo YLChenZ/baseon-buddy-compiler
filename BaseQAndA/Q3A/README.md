@@ -241,4 +241,6 @@ $ cd ..
 $ make vetor-benchmark-run
 ```
 
+# 运行结果：
 
+![Q3Aresult](https://github.com/YLChenZ/baseon-buddy-compiler/blob/main/BaseQAndA/Q3A/Q3Aresult.jpg)
