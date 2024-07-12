@@ -19,7 +19,7 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 
 动态向量加法的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir)，我们把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
 
-```
+```mlir
 func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: memref<?xi32>) {
   %c0 = arith.constant 0 : index
   // Get the dimension of the workload.
@@ -44,7 +44,7 @@ func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: m
 
 完成这一步，我们要给MLIRGccLoopsEx1DynVec.mlir写benchmark：MLIRGccLoopsEx1DynVecBenchmark.cpp，内容如下：
 
-```
+```c++
 //===- MLIRGccLoopsEx1DynVecBenchmark.cpp --------------------------------------------===//
 
 #include <benchmark/benchmark.h>
@@ -102,7 +102,7 @@ void generateResultMLIRGccLoopsEx1DynVec() {
 
 顶层的CMakeLists.txt，可以抄buddy-benchmark的作业：
 
-```
+```cmake
 cmake_minimum_required(VERSION 3.10)
 
 project(MyBenchmark)
@@ -188,7 +188,7 @@ add_subdirectory(benchmark)
 
 针对RISC-V我单独写了一个文件toolchain-riscv64.cmake来指定编译工具链：
 
-```
+```cmake
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR riscv64)
 
@@ -204,7 +204,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
 在benchmark子目录下的CMakeLists.txt内容如下：
 
-```
+```cmake
 #-----------------------------------------------------------------------------------
 # MLIR SCF Dialect GccLoopsEx1 Operation + Upstream Lowering Passes
 #-----------------------------------------------------------------------------------
@@ -306,7 +306,7 @@ $ ninja Vectorbenchmark
 最后采用QEMU来模拟执行得到的Vectorbenchmark：
 
   1. 先写一个makefile简化我们调用库的流程：
-```
+```makefile
 #!/bin/bash
 
 #configure
