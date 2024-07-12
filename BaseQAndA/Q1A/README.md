@@ -19,3 +19,7 @@ $ ninja vectorization-gccloops-benchmark
 $ cd bin
 $ ./vectorization-gccloops-benchmark
 ```
+
+# 运行结果：
+
+![Q1Aresult](https://github.com/YLChenZ/baseon-buddy-compiler/blob/main/BaseQAndA/Q1A/Q1Aresult.jpg)
