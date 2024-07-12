@@ -1,4 +1,4 @@
-查看上一个任务里`gcc-loops`的`MLIR`实现代码，以第一个程序`MLIRGccLoopsEx1.mlir`为例，可以看到它只是朴素的标量版本（用了`scf.for`，`arith.addi`每次只对一位进行操作）。请用`MLIR`的`Vector Dialect`实现一个同样功能的向量化版本，文件命名为`MLIRGccLoopsEx1Vec.mlir`，并加入到`buddy-benchmark`里，与`MLIRGccLoopsEx1.mlir`的性能进行比较。`Vector Dialect`的用法可参考`MLIR`官方文档或`buddy-compiler`中的已有实现，如`buddy-mlir`里的`MLIRVector`样例和`buddy-benchmark`里的矩阵乘法向量化实现。
+查看上一个任务里`gcc-loops`的`MLIR`实现代码，以第一个程序`MLIRGccLoopsEx1.mlir`为例，可以看到它只是朴素的标量版本（用了`scf.for`，`arith.addi`每次只对一位进行操作）。请用`MLIR`的`Vector Dialect`实现一个同样功能的向量化版本，文件命名为`MLIRGccLoopsEx1Vec.mlir`，并加入到`buddy-benchmark`里，与`MLIRGccLoopsEx1.mlir`的性能进行比较。`Vector Dialect`的用法可参考`MLIR`官方文档或`buddy-compiler`中的已有实现，如`buddy-mlir`里的[`MLIRVector`](https://github.com/buddy-compiler/buddy-mlir/tree/main/examples/MLIRVector)样例和`buddy-benchmark`里的[矩阵乘法向量化](https://github.com/buddy-compiler/buddy-benchmark/blob/main/benchmarks/Vectorization/MLIRMatVec.mlir)实现。
 
 这个问题相较于问题1提升了一个大档，要修改的东西比较多也比较细，要自己实现的倒是不多。
 
