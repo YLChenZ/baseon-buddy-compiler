@@ -308,7 +308,7 @@ $ ninja Vectorbenchmark
   1. 先写一个makefile简化我们调用库的流程：
 ```makefile
 #!/bin/bash
-
+#NOTE：下面指定的目录要正确！！！请参考下面的目录设置你的目录，以完成makefile
 #configure
 CROSS_MLIR_LIB := ../../../buddy-mlir/llvm/build-cross-mlir-rv/lib
 QEMU := ../../../buddy-mlir/build/thirdparty/riscv-gnu-toolchain/bin/qemu-riscv64
