@@ -17,7 +17,7 @@ func.func @mlir_gccloopsex1vec(%A: memref<?xi32>, %B: memref<?xi32>,
 
 可以看出我们设置的向量化长度为4。
 
-动态向量加法的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir)，我们把它的函数借鉴一下就是”MLIRGccLoopsEx1DynVec.mlir“：
+动态向量加法 (vector_add) 的[实现在这](https://github.com/buddy-compiler/buddy-mlir/blob/main/examples/VectorExpDialect/vector-exp-dynamic-vector.mlir):
 
 ```mlir
 func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: memref<?xi32>) {
@@ -35,6 +35,33 @@ func.func @vector_add(%input1: memref<?xi32>, %input2: memref<?xi32>, %output: m
       %vec_input2 = vector.load %input2[%idx] : memref<?xi32>, vector<[1]xi32> // vector<?xi32>
       %vec_output = arith.addi %vec_input1, %vec_input2 : vector<[1]xi32> // vector<?xi32>
       vector.store %vec_output, %output[%idx] : memref<?xi32>, vector<[1]xi32> // vector<?xi32>
+      vector.yield
+    }
+  }
+  return
+}
+```
+
+我们把它的函数借鉴一下就是`MLIRGccLoopsEx1DynVec.mlir`：
+
+```mlir
+#map = affine_map<(d0)[s0, s1] -> (s0, -d0 + s1)>
+
+func.func @mlir_gccloopsex1dynvec(%A: memref<?xi32>, %B: memref<?xi32>,
+                      %C: memref<?xi32>) {
+  %c0 = arith.constant 0 : index
+  %n = memref.dim %A, %c0 : memref<?xi32>
+  // Perform dynamic vector addition.
+  // Returns four times the physical vl for element type i32.
+  %vl = vector_exp.get_vl i32, 4 : index
+
+  scf.for %i = %c0 to %n step %vl { // Tiling
+    %it_vl = affine.min #map(%i)[%vl, %n]
+    vector_exp.set_vl %it_vl : index {
+      %vec_b = vector.load %B[%i] : memref<?xi32>, vector<[1]xi32> // vector<?xi32>
+      %vec_c = vector.load %C[%i] : memref<?xi32>, vector<[1]xi32> // vector<?xi32>
+      %vec_res = arith.addi %vec_b, %vec_c : vector<[1]xi32> // vector<?xi32>
+      vector.store %vec_res, %A[%i] : memref<?xi32>, vector<[1]xi32> // vector<?xi32>
       vector.yield
     }
   }
