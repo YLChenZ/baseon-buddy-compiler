@@ -40,7 +40,9 @@ $ cd bin
 $ ./vectorization-gccloops-benchmark
 ```
 
-在做Q3A之前，要保证toolchain-riscv64.cmake和makefile的配置是和你的机器工具环境适配。具体参考：https://github.com/YLChenZ/baseon-buddy-compiler/tree/main/BaseQAndA/Q3A/README.md
+在做Q3A之前，要保证[toolchain-riscv64.cmake的配置](https://github.com/YLChenZ/baseon-buddy-compiler/blob/main/BaseQAndA/Q3A/README.md#%E9%92%88%E5%AF%B9risc-v%E6%88%91%E5%8D%95%E7%8B%AC%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6toolchain-riscv64cmake%E6%9D%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE)和[makefile的配置是和你的机器工具环境适配](https://github.com/YLChenZ/baseon-buddy-compiler/tree/main/BaseQAndA/Q3A#%E6%9C%80%E5%90%8E%E9%87%87%E7%94%A8qemu%E6%9D%A5%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8C%E5%BE%97%E5%88%B0%E7%9A%84vectorbenchmark)。
+
+具体参考：https://github.com/YLChenZ/baseon-buddy-compiler/tree/main/BaseQAndA/Q3A/README.md
 
 Q3A：
 ```
