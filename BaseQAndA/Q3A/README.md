@@ -2,7 +2,7 @@
 
 
 
-这个问题相较于问题2的难度，可以说是学了攻球去打马龙。这一个问题花的时间也是最久，难点在于 (1) RISC-V工具链的构建。(2) 测试用例该怎么弄。(3) 怎么将源代码下降到RISC-V架构，怎么用QEMU来模拟RISC-V架构运行可执行文件。
+这个问题相较于问题2的难度，可以说是学了攻球去打马龙。这一个问题花的时间也是最久，难点在于 (1) [RISC-V工具链的构建](https://github.com/YLChenZ/baseon-buddy-compiler/blob/main/%E8%A3%85%E7%8E%AF%E5%A2%83.md#%E7%BC%96%E8%AF%91buddy-mlir----risc-v%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA)。(2) 测试用例该怎么弄。(3) 怎么将源代码下降到RISC-V架构，怎么用QEMU来模拟RISC-V架构运行可执行文件。
 
 先来看MLIRGccLoopsEx1Vec.mlir，内容片段：
 
@@ -213,7 +213,7 @@ target_link_libraries(GoogleBenchmark INTERFACE Threads::Threads)
 add_subdirectory(benchmark)
 ```
 
-针对RISC-V我单独写了一个文件toolchain-riscv64.cmake来指定编译工具链：
+# 针对RISC-V我单独写了一个文件toolchain-riscv64.cmake来指定编译工具链：
 
 ```cmake
 set(CMAKE_SYSTEM_NAME Linux)
@@ -330,7 +330,7 @@ $ cmake -G Ninja .. \
 $ ninja Vectorbenchmark
 ```
 
-最后采用QEMU来模拟执行得到的Vectorbenchmark：
+# 最后采用QEMU来模拟执行得到的Vectorbenchmark：
 
   1. 先写一个makefile简化我们调用库的流程：
 ```makefile
